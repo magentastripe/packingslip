@@ -1,0 +1,7 @@
+.bundle/
+data/
+Gemfile.lock
+*.pdf
+*.swo
+*.swp
+vendor/
