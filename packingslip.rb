@@ -110,6 +110,10 @@ class MagentaStripeMedia::Manifest
       catalog_no = sprintf("MSM-%05d", data["catalog_no"])
       the_product = @catalog.detect { |product| product["CATALOG-NO"] == catalog_no }
 
+      if !the_product
+        die("cannot find product with number #{catalog_no} in catalog #{kwargs[:catalog_data]}")
+      end
+
       item = MagentaStripeMedia::Item.new
       item.catalog_no = catalog_no
       item.name = the_product["TITLE"]
