@@ -111,7 +111,7 @@ class MagentaStripeMedia::Manifest
       the_product = @catalog.detect { |product| product["CATALOG-NO"] == catalog_no }
 
       item = MagentaStripeMedia::Item.new
-      item.catalog_no = the_product["CATALOG-NO"] = catalog_no
+      item.catalog_no = catalog_no
       item.name = the_product["TITLE"]
       item.qty = data["qty"].to_i
       item.unit_price = the_product["UNIT-PRICE"].to_f
