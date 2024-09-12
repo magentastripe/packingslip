@@ -18,7 +18,7 @@ the goods you're selling (human-readable description, unit price, etc.)
 order_no: 1
 order_date: "2023-09-29"
 
-manifest:
+items:
   -
     catalog_no: 3
     qty: 2
@@ -43,4 +43,4 @@ ship_to: |
 ## License
 
 This software is released by Magenta Stripe Media under the terms of a
-2-clause BSD-style license. Refer to the LICENSE document.
+2-clause BSD-style license. Please refer to the LICENSE document.

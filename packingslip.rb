@@ -2,6 +2,8 @@
 # MAGENTA STRIPE MEDIA
 # Packing Slip Generator Tool
 #
+# Charlotte Koch <charlotte@magentastripe.com>
+#
 
 require 'optparse'
 require 'prawn'
@@ -106,7 +108,7 @@ class MagentaStripeMedia::Manifest
     @business_info = YAML.load(File.read(kwargs[:business_info]))
     details = YAML.load(File.read(kwargs[:manifest_file]))
 
-    @items = details["manifest"].map do |data|
+    @items = details["items"].map do |data|
       catalog_no = sprintf("MSM-%05d", data["catalog_no"])
       the_product = @catalog.detect { |product| product["CATALOG-NO"] == catalog_no }
 
